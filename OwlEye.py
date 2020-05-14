@@ -1,17 +1,31 @@
 
 print("""
-  .oooooo.                    oooo  oooooooooooo                       
- d8P'  `Y8b                   `888  `888'     `8                       
-888      888 oooo oooo    ooo  888   888         oooo    ooo  .ooooo.  
-888      888  `88. `88.  .8'   888   888oooo8     `88.  .8'  d88' `88b 
-888      888   `88..]88..8'    888   888    "      `88..8'   888ooo888 
-`88b    d88'    `888'`888'     888   888       o    `888'    888    .o 
- `Y8bood8P'      `8'  `8'     o888o o888ooooood8     .8'     `Y8bod8P' 
-                                                 .o..P'                
-                                                 `Y8P'                 
-                                                                       
-                                                                       
-                                                                     """)
+                                                  
+                                                  
+                     ........                     
+                    ...........                   
+                   ...............'.....          
+            ......... ........''.'''',,''.        
+                ...      .    ..      .','.              
+           .....              ......    .,,.      
+          .',;;;'.     ...';;::loooc,..  .,'      
+          .;:clcc;,,;:clddxxxollodxxol:.  .'.     
+           ':looolllodkOOOOko:;,;:lxxol;. .'.     
+            .codxdxkOO00kxl,.   .':oxdl:....      
+             .codxO0KK0x:,.    .;codxdl,..'..     
+              'lox0KKKx;....';coxkOkdoc'.',.      
+         .... .cokKXX0x:'.,oxkOkO0Oxl:,.....      
+         ......cdOKKKKOo:;oO0KKK0Odl:'......      
+          ..'.'ldOKXXK0xodkO0K00Oxol;..'....      
+          ..'.,loxKXXK0O000000Okddo:..'....       
+           ...'cook0KOO0KKK00Okxdl,.......        
+            ..'::cxOOxxOOO00Okdoc..  .            
+             ..'':oxxdxkOOOkxo:'.                 
+              ...';lodkkxxoc,.                    
+                 ..,,;;'...                       
+                                                  
+                                                       
+                                                                       OwlEye""")
 print(" Made by VioletCarson                                                  v1.0.0")                                    
 print("")
 print("")
@@ -119,7 +133,7 @@ for x in range (-combinations, combinations):
                             wordlist.append(Password)
                             x += 1
  
-                            # three variable password generator
+                             #three variable password generator
 for x in range (-combinations,2*combinations):
         wordlist = list(dict.fromkeys(wordlist))  
         x = len(wordlist)
@@ -173,7 +187,7 @@ for x in range (-combinations,2*combinations):
                         else:
                             wordlist.append(Password)
                             x = x + 1
-                           
+                             #output
 print ("""
 
 
@@ -181,6 +195,7 @@ print ("""
 print(wordlist)
 print ("Total unique passwords:")
 print (len(wordlist))
+print("")
 
 if starttest == "y":
     if testcode in wordlist:
@@ -190,7 +205,14 @@ if starttest == "y":
 if combinations > 5000:
     print ("Total combinations:")
     print (combinations)
+  
+print("")
+print("the wordlist has been saved as target.txt")
 print("""
 
 ...Finch also notices a rose placed on the train seat. It is a kind called a “Violet Carson”
 """)
+
+with open('target.txt', 'w') as f:
+    for item in wordlist:
+        f.write("%s\n" % item)
